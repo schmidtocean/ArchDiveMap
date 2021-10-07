@@ -99,65 +99,7 @@ map.on('load', function () {
         "type":'geojson',
         'data':'./static/2017_2021_SuB_locationswithdepthQC.json'
     })
-    // map.addSource('FKAllstart', {
-    //     "type":'geojson',
-    //     'data':'./static/FKNAV_Starts_ALL.json'
-    // })
     
-    // cruises.forEach((e,i)=>{
-    //     map.addLayer({
-    //     'id': 'multiline' + e,
-    //     'type': 'line',
-    //     'source': 'FKALL',
-    //     'source-layer':e+'FKNAVGGA_Min_Line',
-    //     'layout': {
-    //                 'line-join': 'round',
-    //                 'line-cap': 'round'
-    //                 },
-    //     'paint': {
-    //     'line-color': 'black',
-    //     'line-width': 1
-    //     }
-
-    //     });
-
-    //     map.addLayer({
-    //     'id': 'point'+e,
-    //     'type': 'circle',
-    //     'source': "FKALL",
-    //     'source-layer':e+'FKNAVGGA',
-    //     // 'minzoom': zoomThreshold,
-    //     'paint': {
-    //         'circle-radius': {
-    //                 'base': 1.75,
-    //                 'stops': [
-    //                         [10, 2],
-    //                         [22, 5]
-    //                     ]
-    //                 },
-    //         'circle-color': 'black'
-    //         }
-    //     })   
-        
-    //     map.on('mouseenter', 'multiline' + e, function (q) {
-    //     // Change the cursor style as a UI indicator.
-    //         map.getCanvas().style.cursor = 'pointer';
-   
-    //         var description = q.features[0].properties;
-    //         c= document.getElementById('cardTitle')
-    //         c.innerText= description.cruise_id
-    //         s= document.getElementById('subTitle')
-    //         s.innerText= '  '
-
-    //     });
-    //     map.on('mouseleave', 'multiline' + e, function (q) {
-    //     // Change the cursor style as a UI indicator.
-    //         map.getCanvas().style.cursor = 'default';
-        
-    //     });
-
-    // });  
-            
 
     subcruises.forEach((e,i)=>{
         map.addLayer({
@@ -178,52 +120,7 @@ map.on('load', function () {
                 }      
         });
         
-        // map.addLayer({
-        // 'id': 'sbpointhover'+e,
-        // 'type': 'circle',
-        // 'source': 'FKALL',
-        // 'source-layer':e+'SBSPRINT',
-        // // 'minzoom': zoomThreshold,
-        // 'paint':{
-        //     'circle-color': 'grey',
-        //     'circle-radius': [
-        //         "case",
-        //             ["boolean",["feature-state","hover"], false],
-        //         10,2 ]
-        //         }      
-        // });
-
-    //     map.addLayer({
-    //     'id': 'sbpoint1'+e,
-    //     'type': 'line',
-    //     'source': 'FKALL',
-    //     'source-layer':e+'SBSPRINT_Line',
-    //     'paint': {
-    //         'line-color': 'grey',
-    //         'line-width': 1
-    //         }  
-    //     });
-
-    //     map.on('mouseenter','sbpoint1'+e, function (q) {
-    //     // Change the cursor style as a UI indicator.
-    //         map.getCanvas().style.cursor = 'pointer';
-   
-    //         var description = q.features[0].properties;
-    //         c= document.getElementById('cardTitle')
-    //         c.innerText= description.cruise_id
-    //         s= document.getElementById('subTitle')
-    //         s.innerText= description.dive_id
-
-
-    //     });
-    //     map.on('mouseleave', 'sbpoint1'+e, function (q) {
-    //     // Change the cursor style as a UI indicator.
-    //         map.getCanvas().style.cursor = 'default';
-          
-    //     });
-
-    });
-
+    
     map.loadImage('./static/sub1.png', function(error, image) {
         if (error) throw error;
         // Add the loaded image to the style's sprite with the ID 
@@ -263,43 +160,7 @@ map.on('load', function () {
         }
     });
 
-    // map.loadImage('./static/vessel2.png', function(error, image) {
-    //     if (error) throw error;
-    //     // Add the loaded image to the style's sprite with the ID 
-    //     map.addImage('vessel', image);
-        
-    //     map.addSource('point', {
-    //                 'type': 'geojson',
-    //                     'data': {
-    //                     'type': 'FeatureCollection',
-    //                     'features': [
-    //                     {
-    //                     'type': 'Feature',
-    //                     'geometry': {
-    //                     'type': 'Point',
-    //                     'coordinates': [-77.4144, 25.0759]
-    //                     }
-    //                     }
-    //                 ]
-    //             }
-    //         })
-    // });
-    // //start of FK
-    // map.addLayer({
-    // 'id': 'vesselpt1',
-    // 'type': 'symbol',
-    // 'source': 'FKAllstart',
-    // 'layout': {
-    //     'icon-image': 'vessel', // reference the image
-    //     "icon-size":{'base': .1,
-    //             'stops': [
-    //                     [1, .1],
-    //                     [22, .5]
-    //                 ]
-    //             },
-    //      "icon-allow-overlap":true
-    //     }
-    // });
+    
 
     //show location of cursur in lower map corner
     map.on('mousemove', function (e) {
