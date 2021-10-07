@@ -19,12 +19,32 @@ body { margin: 0; padding: 0;background-color: black; }
   
 
 }
+.mediacard{
+  
+    background-color:  #383838;
+     margin: auto;
+    margin-right: 30px;
+
+}
+
 .title{
     color: whitesmoke;
     text-align: center;
+    font-size: x-large;
+    display: block;
     padding:5px;
-    border-bottom: 1px solid whitesmoke;
+}
 
+a{
+    text-decoration: none;
+}
+.subtitle{
+    font-size: large;
+    text-align: center;
+    color: whitesmoke;
+    padding:10px;
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
 }
 
 #info {
