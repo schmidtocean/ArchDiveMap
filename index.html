@@ -51,8 +51,8 @@ var complete_sub_list=    {
    
 }
 
-var cruises =  Object.values(complete_cruise_list).flat()
- var subcruises =  Object.values(complete_sub_list).flat()
+// var cruises =  Object.values(complete_cruise_list).flat()
+var subcruises =  Object.values(complete_sub_list).flat()
 // var colors =["#f7f7f7","#d9d9d9","#bdbdbd","#969696","#737373","#525252","#252525","black"]
 // var hoveredStateId = null;
 map.on('load', function () { 
@@ -97,28 +97,28 @@ map.on('load', function () {
 
     map.addSource('SBstart', {
         "type":'geojson',
-        'data':'./static/2017_2021_SuB_locationswithdepthQC.json'
+        'data':'./static/2017_2021_SuB_locationwithdepthQC.json'
     })
     
 
-    subcruises.forEach((e,i)=>{
-        map.addLayer({
-        'id': 'sbpoint'+e,
-        'type': 'circle',
-        'source': 'FKALL',
-        'source-layer':e+'SBSPRINT',
-        'minzoom': zoomThreshold,
-        'paint':{
-            'circle-radius': {
-                    'base': 1.75,
-                    'stops': [
-                            [10, 2],
-                            [22, 5]
-                        ]
-                    },
-            'circle-color': 'grey'  
-                }      
-        });
+    // subcruises.forEach((e,i)=>{
+    //     map.addLayer({
+    //     'id': 'sbpoint'+e,
+    //     'type': 'circle',
+    //     'source': 'FKALL',
+    //     'source-layer':e+'SBSPRINT',
+    //     'minzoom': zoomThreshold,
+    //     'paint':{
+    //         'circle-radius': {
+    //                 'base': 1.75,
+    //                 'stops': [
+    //                         [10, 2],
+    //                         [22, 5]
+    //                     ]
+    //                 },
+    //         'circle-color': 'grey'  
+    //             }      
+    //     });
         
     
     map.loadImage('./static/sub1.png', function(error, image) {
@@ -169,14 +169,13 @@ map.on('load', function () {
 
     })
 
-        
-
-        
 })
+//add scale to bottom
 var scale = new mapboxgl.ScaleControl({
 maxWidth: 80,
 unit: 'imperial'
 });
+
 map.addControl(scale);
  
 scale.setUnit('metric');
