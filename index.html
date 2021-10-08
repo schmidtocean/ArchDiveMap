@@ -240,7 +240,8 @@ map.on('load', function () {
                             }
                             else{
                                 //problem
-                                y.appendChild.innerHTML = '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
+                                q=y.appendChild(document.createElement('div'))
+                                q.innerHTML = '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
                                 console.log(description.dive_id)
 
                             }

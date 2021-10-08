@@ -6,12 +6,15 @@ body { margin: 0; padding: 0;background-color: black; }
     height:100vh;
     background-color: transparent;
     right:0;
-    display: flex;
+    /* display: flex; */
+    top:75px;
 }
 #card{
     position: relative;
-    width:250px;
-    height:300px;
+    width:300px;
+    min-height: 250px;
+    max-height: 80vh;
+    overflow-y: scroll;
     background-color:  #383838;
     border: 2px solid whitesmoke;
     margin: auto;
@@ -24,6 +27,7 @@ body { margin: 0; padding: 0;background-color: black; }
     background-color:  #383838;
      margin: auto;
     margin-right: 30px;
+
 
 }
 
