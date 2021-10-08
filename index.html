@@ -190,10 +190,43 @@ map.on('load', function () {
             "icon-allow-overlap":true
         }
     });
+ 
 
     
+    //add hover image
+    map.loadImage('./static/pick.png', function(error, image) {
+        if (error) throw error;
+        // Add the loaded image to the style's sprite with the ID 
+        map.addImage('picker', image);
+        
+        map.addSource('point', {
+                    'type': 'geojson',
+                        'data': pickerdata
+            })
+            
+    });
+    //start of dives
+    map.addLayer({
+    'id': 'picker',
+    'type': 'symbol',
+    'source': 'SBstart',
+    'layout': {
+        'icon-image': 'picker', // reference the image
+        "icon-size":{'base': .5,
+                'stops': [
+                        [1, 1],
+                        [22, 2]
+                    ]
+                }
+        },
+        'filter': ['in', 'dive_id', '']
+    });
 
     
+    // map.getSource('pointA').setData(pickerdata);
+
+
+    var hoveredStateId;
 
     //show location of cursur in lower map corner
     map.on('mousemove', function (e) {
@@ -202,6 +235,7 @@ map.on('load', function () {
 
     })
 
+
     map.on('mousemove','sbpoint1', function (q) {
         // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
@@ -209,9 +243,8 @@ map.on('load', function () {
             var description = q.features[0].properties;
             
             //check if its the same dive and dont do anything if so
-
-
             if (hoverdive != description.dive_id){
+                
 
                     c= document.getElementById('cardTitle')
                     let cruise_id=description.cruise_id
@@ -219,6 +252,7 @@ map.on('load', function () {
                     c.href = cruise_descript[cruise_id].cruise_link
                     
                     hoverdive = description.dive_id
+                    map.setFilter('picker', ['in', 'dive_id', hoverdive]);
                     s= document.getElementById('subTitle')
                     s.innerText= 'Dive ' + hoverdive
 
