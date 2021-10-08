@@ -36,7 +36,7 @@
         minZoom: 2,
         maxZoom: 22
     });
-    
+var hoverdive ='' ;
 var zoomThreshold = 10;
 // var complete_cruise_list = {
 //     "2021":["FK210206","FK210313","FK210321","FK210409","FK210501"],
@@ -205,45 +205,49 @@ map.on('load', function () {
     map.on('mousemove','sbpoint1', function (q) {
         // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
-   
+            
             var description = q.features[0].properties;
-            c= document.getElementById('cardTitle')
-            let cruise_id=description.cruise_id
-            c.innerText= cruise_descript[description.cruise_id].cruise_name
-            c.href = cruise_descript[description.cruise_id].cruise_link
             
-            
-            s= document.getElementById('subTitle')
-            s.innerText= 'Dive ' + description.dive_id
+            //check if its the same dive and dont do anything if so
 
-            y = document.getElementById('mediacard')
-            vids = description.videolistids
-            
-            if(vids == '[\"NaN"\]'){
-                y.innerText = "No Video Available"
-            }
-            else{
-                vids = vids.replaceAll('"','')
-                vids = vids.replaceAll('[','')
-                vids = vids.replaceAll(']','')
-                vids = vids.split(',')
-                vids.forEach((e,i) => {
-                    srcvd = "https://www.youtube.com/embed/" + e
-                    if (i == 0){
-                        y.innerHTML=  '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
+
+            if (hoverdive != description.dive_id){
+
+                    c= document.getElementById('cardTitle')
+                    let cruise_id=description.cruise_id
+                    c.innerText= cruise_descript[cruise_id].cruise_name
+                    c.href = cruise_descript[cruise_id].cruise_link
+                    
+                    hoverdive = description.dive_id
+                    s= document.getElementById('subTitle')
+                    s.innerText= 'Dive ' + hoverdive
+
+                    y = document.getElementById('mediacard')
+                    vids = description.videolistids
+                    
+                    if(vids == '[\"NaN"\]'){
+                        y.innerText = "No Video Available"
                     }
                     else{
-                        //problem
-                        y.appendChild.innerHTML = '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
-                        console.log(description.dive_id)
+                        vids = vids.replaceAll('"','')
+                        vids = vids.replaceAll('[','')
+                        vids = vids.replaceAll(']','')
+                        vids = vids.split(',')
+                        vids.forEach((e,i) => {
+                            srcvd = "https://www.youtube.com/embed/" + e
+                            if (i == 0){
+                                y.innerHTML=  '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
+                            }
+                            else{
+                                //problem
+                                y.appendChild.innerHTML = '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
+                                console.log(description.dive_id)
 
+                            }
+                        
+                        });   
                     }
-                   
-                    
-                });
-                
-                
-            }
+                }
 
 
             
