@@ -12,6 +12,7 @@
 <body>
 <div id="map"></div>
 <pre id='info'></pre>
+<a class='logo' href="https://www.schmidtocean.org"> </a>
 <div id=side>
     <div id="card">
         <a href ="" id="cardTitle" class ="title"> </a>
@@ -31,7 +32,7 @@
         container: 'map',
         //style: 'mapbox://styles/soidpm/ckn7scdev1e4v17nvxjp5xdgt',
         style: 'mapbox://styles/mapbox/dark-v10',
-        center: [118,-34],
+        center: [-166,18],
         zoom: 3.12,
         minZoom: 2,
         maxZoom: 22
@@ -250,6 +251,7 @@ map.on('load', function () {
                     let cruise_id=description.cruise_id
                     c.innerText= cruise_descript[cruise_id].cruise_name
                     c.href = cruise_descript[cruise_id].cruise_link
+                    c.target ="_blank" 
                     
                     hoverdive = description.dive_id
                     map.setFilter('picker', ['in', 'dive_id', hoverdive]);
