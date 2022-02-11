@@ -3,25 +3,26 @@ body { margin: 0; padding: 0;background-color: black; }
 /* #top { color:whitesmoke; font-size: 16px;position:relative;} */
 #side{
     position: absolute;
-    height:100vh;
+    /* height:100vh; */
     background-color: transparent;
     right:0;
     /* display: flex; */
-    top:75px;
+    margin:10px;
 }
 #card{
     position: relative;
     width:300px;
-    min-height: 250px;
+    min-height: 275px;
     max-height: 80vh;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color:  #383838;
     border: 2px solid whitesmoke;
     margin: auto;
     margin-right: 30px;
-  
 
 }
+  
 .mediacard{
   
     background-color:  #383838;
@@ -54,8 +55,8 @@ a{
 #info {
   margin-right: 10px;
   text-align: right;
-  right: 20vw;
-  left: 10px;
+  bottom: 10px;
+  width:100vw;
   font: 15px arial, sans-serif;
   border: none;
   font-size: 12px;
@@ -65,4 +66,17 @@ a{
   position: absolute;
   z-index: 1;
 
+}
+
+.logo{
+    background-image: url("./SOI_logo_stacked.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 5px solid white;
+    width: 150px;
+    position: absolute;
+    height: 100px;
+    background-position: center;
+    margin: 10px;
 }
