@@ -33,6 +33,7 @@
         //style: 'mapbox://styles/soidpm/ckn7scdev1e4v17nvxjp5xdgt',
         style: 'mapbox://styles/mapbox/dark-v10',
         center: [-166,18],
+        attributionControl: false,
         zoom: 3.12,
         minZoom: 2,
         maxZoom: 22
@@ -307,6 +308,12 @@ unit: 'imperial'
 map.addControl(scale);
  
 scale.setUnit('metric');
+
+
+map.addControl(new mapboxgl.AttributionControl({
+customAttribution: '<a href="https:schmidtocean.org" target="_black" role="listitem">Schmidt Ocean Institute</a>'
+}));
+
 
 </script>
  
