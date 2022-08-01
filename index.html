@@ -12,7 +12,29 @@
 <body>
 <div id="map"></div>
 <pre id='lonlat'>Longitude: , Latitude:  </pre>
-<a class='logo' href="https://www.schmidtocean.org"> </a>
+<nav id ="sidebar">
+    <ul>
+        <li><a class='logo' id ='soilogo' href="https://www.schmidtocean.org" target="_blank"> </a></li>
+        <li><button class='logo' id='infologo' > </a></button>
+        <li><a class='logo' > </a></li>
+        <li></li>
+        <li></li>
+    </ul>
+</nav>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Schmidt Ocean Institute is a 501(c)(3) private non-profit operating foundation established in March 2009 to advance oceanographic research, discovery, and knowledge, and catalyze sharing of information about the oceans.</p>
+    <p>  This application displays the starting location of dive events performed by the ROV SuBastian between 2017-2022 deployed by the R/V Falkor.  During dive events, livestream video is broadcast to youtube channel.  The associated livestreams are made available here by hovering on a dive location.  Some dives may have been split into several videos and all associated videos are shown.  There are some livestreams that unofrtunaltey are no longer available.   </p>
+    <p><span style="font-weight:heavy; color:rgb(211, 89, 89)">CURRENTLY THIS SITE IS IN DEVELOPMENT AND TESTING</span></p>
+    </div>
+
+</div>
+
+<!-- <a class='logo' href="https://www.schmidtocean.org"> </a> -->
 <div id=side>
     <div id="card">
         <a href ="" id="cardTitle" class ="title"> </a>
@@ -313,6 +335,34 @@ scale.setUnit('metric');
 map.addControl(new mapboxgl.AttributionControl({
 customAttribution: '<a href="https:schmidtocean.org" target="_black" role="listitem">Schmidt Ocean Institute</a>'
 }));
+
+
+// INFO MODAL
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("infologo");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
+}
 
 
 </script>
