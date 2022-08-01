@@ -52,21 +52,22 @@ a{
     border-bottom: 1px solid whitesmoke;
 }
 
-#info {
-  margin-right: 10px;
-  text-align: right;
-  bottom: 10px;
-  width:100vw;
-  font: 15px arial, sans-serif;
-  border: none;
-  font-size: 12px;
-  color:white;
-  background: none;
-  height:auto;
-  position: absolute;
-  z-index: 1;
-
-}
+#lonlat {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    width:100vw;
+    font: 15px arial, sans-serif;
+    border: none;
+    font-size: 12px;
+    color:white;
+    height:auto;
+    z-index: 1;
+  
+  }
 
 .logo{
     background-image: url("./SOI_logo_stacked.jpg");

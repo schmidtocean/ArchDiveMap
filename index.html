@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="map"></div>
-<pre id='info'></pre>
+<pre id='lonlat'>Longitude: , Latitude:  </pre>
 <a class='logo' href="https://www.schmidtocean.org"> </a>
 <div id=side>
     <div id="card">
@@ -232,8 +232,8 @@ map.on('load', function () {
 
     //show location of cursur in lower map corner
     map.on('mousemove', function (e) {
-            document.getElementById('info').innerHTML =
-            JSON.stringify(e.lngLat);
+
+    document.getElementById('lonlat').innerHTML ='Longitude: ' + e.lngLat['lng'].toString() + ' , Latitude: ' + e.lngLat.lat.toString()
 
     })
 
