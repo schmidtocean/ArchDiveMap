@@ -5,10 +5,10 @@
 <title>ROV Location</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 
-<!-- <link href="https://api.mapbox.com/mapbox-gl-js/v1.13.1/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v1.13.1/mapbox-gl.js"></script> -->
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.13.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.13.1/mapbox-gl.js"></script>
+<!-- <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script> -->
 
 <link rel="stylesheet" href="./static/styles.css">
 
@@ -71,7 +71,7 @@
         zoom: 3.12,
         minZoom: 2,
         maxZoom: 22,
-        projection: 'globe'
+       // projection: 'globe'
     });
 var hoverdive ='' ;
 var zoomThreshold = 10;
@@ -124,7 +124,7 @@ var subcruises =  Object.values(complete_sub_list).flat()
 // var colors =["#f7f7f7","#d9d9d9","#bdbdbd","#969696","#737373","#525252","#252525","black"]
 // var hoveredStateId = null;
 map.on('load', function () { 
-    map.setFog({});
+    // map.setFog({});
     map.setPaintProperty('water', 'fill-color', '#78bced');
     map.addSource('10m-bathymetry-81bsvj', {
 	    type: 'vector',
@@ -309,8 +309,10 @@ map.on('load', function () {
                         vids.forEach((e,i) => {
                             srcvd = "https://www.youtube.com/embed/" + e
                             if (i == 0){
-                                
-                                y.innerHTML=  '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
+                                y.innerHTML ='';
+                                // y.innerHTML=  '<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
+                                q=y.appendChild(document.createElement('div'))
+                                q.innerHTML ='<iframe id="ytplayer" type="text/html" width=”250″ src="' + srcvd + '" ' + 'frameborder="0"></iframe>'
                             }
                             else{
                                 //problem

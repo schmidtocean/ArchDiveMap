@@ -4,10 +4,13 @@ body { margin: 0; padding: 0;background-color: black; }
 
 
 .scroll-container{
-    bottom: 0;
-    width: 100vw;
+    /* bottom: 0; */
+    /* width: 100vw; */
+    right:0;
+    width:300px;
+    height: 100vh;
     position: absolute;
-    height: 235px;
+    /* height: 235px; */
     /* border: 3px solid whitesmoke; */
     background-color:  #3838383f;
 }
@@ -24,7 +27,8 @@ body { margin: 0; padding: 0;background-color: black; }
 #titlecard{
     border-bottom: 2px solid whitesmoke;
     margin: auto;
-    width: 100vw;
+    /* width: 100vw; */
+    margin-top: 30px;
 }
 
 
@@ -40,10 +44,12 @@ body { margin: 0; padding: 0;background-color: black; }
     background-color:  transparent;
     margin: auto;
     display: flex;
-    width: 100vw;
-    flex-direction: row;
+    /* width: 100vw; */
+    /* flex-direction: row; */
+    flex-direction: column;
     justify-content: center;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
+    overflow-y: scroll;
 }
 
 .title{
@@ -52,8 +58,7 @@ body { margin: 0; padding: 0;background-color: black; }
     font-size: x-large;
     display: block;
     padding:5px;
-    overflow-x: scroll;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 
