@@ -1,4 +1,4 @@
-body { margin: 0; padding: 0;background-color: black; }
+body { margin: 0; padding: 0;background-color: black; font-family: 'EB Garamond', serif; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%;}
 /* #top { color:whitesmoke; font-size: 16px;position:relative;} */
 
@@ -70,6 +70,13 @@ body { margin: 0; padding: 0;background-color: black; }
 
 a{
     font-style: italic;
+    color: white;
+
+}
+
+a:hover{
+    color:rgb(30, 212, 212);
+
 }
 .subtitle{
     font-size: large;
