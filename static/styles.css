@@ -204,7 +204,7 @@ nav ul{list-style: none; display:contents;}
     .viz-container{
         bottom: 0;
         width:100vw;
-        height:320px;
+        height:300px;
     } 
 
    
@@ -214,13 +214,22 @@ nav ul{list-style: none; display:contents;}
         overflow-y: scroll;
     }
 
+    #titlecard{
+        margin-top: 0;
+    }
+
+
+    .modal-content{
+        max-width: 85%;
+    }
+
 } 
 
-@media screen and (min-width: 700px) { */
-    /* .mediacard{
+/* @media screen and (min-width: 700px) { 
+     .mediacard{
         justify-content: center;
-    } */
+    } 
 
     
-}
- 
+} 
+*/
