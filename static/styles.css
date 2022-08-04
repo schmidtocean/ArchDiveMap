@@ -15,15 +15,15 @@ body { margin: 0; padding: 0;background-color: black; font-family: 'EB Garamond'
     background-color:  #3838383f;
 }
 .viz-container{
-    background-color:#3838383f;
+    background-color:#38383866;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     right:0;
-    width:300px;
+    width:480px;
     /* height: 100vh; */
-    height:320px;
+    height:455px;
     position: absolute;
     
 
@@ -225,11 +225,14 @@ nav ul{list-style: none; display:contents;}
 
 } 
 
-/* @media screen and (min-width: 700px) { 
-     .mediacard{
+ @media screen and (min-width: 700px) { 
+     /* .mediacard{
         justify-content: center;
-    } 
-
+    }  */
+    iframe{
+        height: 270px;
+        width:480px;
+    }
     
 } 
-*/
+
