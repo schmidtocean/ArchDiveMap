@@ -55,7 +55,7 @@ body { margin: 0; padding: 0;background-color: black; font-family: 'EB Garamond'
     flex-direction: column;
     /* justify-content: center; */
     /* overflow-x: scroll; */
-    overflow-y: scroll;
+    overflow-y: auto
 }
 
 .title{
@@ -213,7 +213,7 @@ nav ul{list-style: none; display:contents;}
 
     .mediacard{
         /* justify-content: left; */
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     #titlecard{
@@ -225,7 +225,7 @@ nav ul{list-style: none; display:contents;}
         max-width: 85%;
     }
 
-    .mymod
+   
 
 } 
 
