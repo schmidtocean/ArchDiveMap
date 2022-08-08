@@ -173,6 +173,8 @@ nav ul{list-style: none; display:contents;}
     color:white;
     font-size: 18px;
     border-radius: 5px;
+    overflow-y: auto;
+    max-height: 80%;
   }
   
   /* The Close Button */
@@ -222,6 +224,8 @@ nav ul{list-style: none; display:contents;}
     .modal-content{
         max-width: 85%;
     }
+
+    .mymod
 
 } 
 
