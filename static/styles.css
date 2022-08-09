@@ -1,4 +1,4 @@
-body { margin: 0; padding: 0;background-color: black; font-family: 'EB Garamond', serif; }
+body { margin: 0; padding: 0;background-color: black; font-family: 'EB Garamond', serif;  color:whitesmoke;}
 #map { position: absolute; top: 0; bottom: 0; width: 100%;}
 /* #top { color:whitesmoke; font-size: 16px;position:relative;} */
 
@@ -55,7 +55,9 @@ body { margin: 0; padding: 0;background-color: black; font-family: 'EB Garamond'
     flex-direction: column;
     /* justify-content: center; */
     /* overflow-x: scroll; */
-    overflow-y: auto
+    overflow-y: auto;
+    color:whitesmoke;
+    font-size: 16px;
 }
 
 .title{
