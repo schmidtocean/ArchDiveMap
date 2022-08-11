@@ -231,6 +231,22 @@ nav ul{list-style: none; display:contents;}
    
 
 } 
+
+@media screen and (min-width: 700px) and  (orientation: portrait) {
+    iframe{
+        height: 270px;
+        width:480px;
+    }
+
+}
+
+@media screen and (max-height: 915px) and  (orientation: portrait) {
+
+    .viz-container{
+        height: 300px;
+    }
+}
+
 @media screen and (max-width: 915px) and  (orientation: landscape) {
    
    .viz-container{
