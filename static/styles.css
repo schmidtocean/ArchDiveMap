@@ -231,8 +231,31 @@ nav ul{list-style: none; display:contents;}
    
 
 } 
+@media screen and (max-width: 915px) and  (orientation: landscape) {
+   
+   .viz-container{
+      
+       width:320px;
+       height:300px;
+    
+   } 
 
- @media screen and (min-width: 700px) { 
+
+
+   #titlecard{
+       margin-top: 30px;
+   }
+
+
+   .modal-content{
+       max-width: 85%;
+   }
+
+
+} 
+
+
+ @media screen and (min-width: 916px) { 
      /* .mediacard{
         justify-content: center;
     }  */
